@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aster | The Galaxy View</title>
+    <style>
+        :root {
+            --celestial-navy: #0a192f;
+            --aster-purple: #6c5ce7;
+            --organic-green: #00b894;
+            --asteroid-gray: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--celestial-navy);
+            color: var(--asteroid-gray);
+            margin: 0;
+            text-align: center;
+        }
+
+        .hero {
+            padding: 100px 20px;
+            background: radial-gradient(circle at center, #112240 0%, #0a192f 100%);
+        }
+
+        .search-bar {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 15px 25px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--aster-purple);
+            border-radius: 30px;
+            color: #8892b0;
+            font-style: italic;
+        }
+
+        .constellation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            padding: 20px;
+        }
+
+        .actor-card {
+            background: #112240;
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .actor-card:hover {
+            border-color: var(--organic-green);
+            transform: scale(1.02);
+        }
+
+        .actor-thumb {
+            width: 100%;
+            height: 200px;
+            background: #0d1b2a;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .actor-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #0d1b2a;
+        }
+
+        .vibe-tag {
+            font-size: 12px;
+            color: var(--organic-green);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div style="font-size: 32px; font-weight: bold; color: var(--aster-purple);">ASTER</div>
+        <h1>Explore the Human Galaxy</h1>
+        <p style="color: #8892b0;">Find the stars that share your soul's narrative.</p>
+        <div class="search-bar">Search by name or vibe (e.g. "Summer Afternoon", "Unyielding Spirit")...</div>
+    </section>
+
+    <div class="container">
+        <h2 style="text-align: left; max-width: 1200px; margin: 0 auto 20px; padding-left: 20px;">Trending Constellations</h2>
+        <div class="constellation-grid">
+            <!-- Song Weilong Card -->
+            <div class="actor-card" onclick="window.location.href='../../aster/mockups/actor_hub_song.html'">
+                <div class="actor-thumb">
+                    <img src="https://image.tmdb.org/t/p/original/ak27bOmwaUpgUCy6lbahSvbppZA.jpg" alt="Song Weilong">
+                </div>
+                <div class="vibe-tag">The Resilient Old Soul</div>
+                <h3 style="margin: 10px 0;">宋威龙</h3>
+                <p style="font-size: 14px; color: #8892b0;">From Shaolin to the screen, a journey of family and grit.</p>
+            </div>
+            <!-- Babe Ruth Card -->
+            <div class="actor-card" onclick="window.location.href='../../aster/mockups/trading_card_ruth.html'">
+                <div class="actor-thumb">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Babe_Ruth2.jpg" alt="Babe Ruth">
+                </div>
+                <div class="vibe-tag">The Joyful Titan</div>
+                <h3 style="margin: 10px 0;">Babe Ruth</h3>
+                <p style="font-size: 14px; color: #8892b0;">A legend born from reform school, defining baseball with joy.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
