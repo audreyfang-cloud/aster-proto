@@ -22,6 +22,31 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            position: relative;
+        }
+
+        .close-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: #8892b0;
+            text-decoration: none;
+            z-index: 1000;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+
+        .close-btn:hover {
+            color: #fff;
+            background: rgba(255,255,255,0.1);
         }
 
         .card-container {
@@ -135,6 +160,7 @@
     </style>
 </head>
 <body>
+    <a href="entry_hub_galaxy.html" class="close-btn">&times;</a>
     <div class="card-container">
         <div class="card">
             <!-- FRONT OF CARD -->
