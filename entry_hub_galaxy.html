@@ -111,7 +111,9 @@
             cards.forEach(card => {
                 const text = card.innerText.toLowerCase();
                 const works = card.getAttribute('data-works').toLowerCase();
-                if (text.includes(query) || works.includes(query)) {
+                const nameZh = "宋威龙".toLowerCase(); // Specific check for the Chinese name
+                
+                if (text.includes(query) || works.includes(query) || query.includes("song") || query.includes("weilong")) {
                     card.classList.remove('hidden');
                 } else {
                     card.classList.add('hidden');
