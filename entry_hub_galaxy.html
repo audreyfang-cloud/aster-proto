@@ -20,6 +20,49 @@
             text-align: center;
         }
 
+        /* User Profile Header */
+        .user-header {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            z-index: 1000;
+        }
+        .msg-btn {
+            position: relative;
+            cursor: pointer;
+            font-size: 20px;
+            color: #8892b0;
+        }
+        .msg-badge {
+            position: absolute;
+            top: -5px;
+            right: -8px;
+            background: #ff4757;
+            color: white;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        .user-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 2px solid var(--aster-purple);
+            background: #112240;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .user-avatar:hover { transform: scale(1.1); }
+
         .hero {
             padding: 100px 20px;
             background: radial-gradient(circle at center, #112240 0%, #0a192f 100%);
@@ -111,9 +154,9 @@
             cards.forEach(card => {
                 const text = card.innerText.toLowerCase();
                 const works = card.getAttribute('data-works').toLowerCase();
-                const nameZh = "宋威龙".toLowerCase(); // Specific check for the Chinese name
+                const nameEn = card.querySelector('h3').innerText.toLowerCase();
                 
-                if (text.includes(query) || works.includes(query) || query.includes("song") || query.includes("weilong")) {
+                if (text.includes(query) || works.includes(query) || nameEn.includes(query)) {
                     card.classList.remove('hidden');
                 } else {
                     card.classList.add('hidden');
@@ -123,6 +166,11 @@
     </script>
 </head>
 <body>
+    <div class="user-header">
+        <div class="msg-btn" onclick="alert('3 new kindred signals!')">✉️<span class="msg-badge">3</span></div>
+        <a href="projects/aster/mockups/user_profile.html" class="user-avatar">🍑</a>
+    </div>
+
     <section class="hero">
         <div style="font-size: 32px; font-weight: bold; color: var(--aster-purple); cursor: pointer;" onclick="window.location.reload()">ASTER</div>
         <h1>Explore the Human Galaxy</h1>
@@ -144,7 +192,7 @@
                     <img src="https://image.tmdb.org/t/p/original/ak27bOmwaUpgUCy6lbahSvbppZA.jpg" alt="Song Weilong">
                 </div>
                 <div class="vibe-tag">The Resilient Old Soul</div>
-                <h3 style="margin: 10px 0;">宋威龙</h3>
+                <h3 style="margin: 10px 0;">宋威龙 Song Weilong</h3>
                 <p style="font-size: 14px; color: #8892b0;">From Shaolin to the screen, a journey of family and grit.</p>
             </div>
             <!-- Babe Ruth Card -->

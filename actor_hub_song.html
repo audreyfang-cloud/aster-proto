@@ -21,6 +21,49 @@
             line-height: 1.6;
         }
 
+        /* User Profile Header */
+        .user-header {
+            position: absolute;
+            top: 25px;
+            right: 40px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            z-index: 1000;
+        }
+        .msg-btn {
+            position: relative;
+            cursor: pointer;
+            font-size: 20px;
+            color: #8892b0;
+        }
+        .msg-badge {
+            position: absolute;
+            top: -5px;
+            right: -8px;
+            background: #ff4757;
+            color: white;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        .user-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 2px solid var(--aster-purple);
+            background: #112240;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .user-avatar:hover { transform: scale(1.1); }
+
         .container {
             max-width: 900px;
             margin: 0 auto;
@@ -682,6 +725,11 @@
 
 </head>
 <body>
+    <div class="user-header">
+        <div class="msg-btn" onclick="alert('3 new kindred signals!')">✉️<span class="msg-badge">3</span></div>
+        <a href="projects/aster/mockups/user_profile.html" class="user-avatar">🍑</a>
+    </div>
+
     <div id="thread-view" class="thread-overlay">
         <div class="thread-content">
             <span class="close-thread" onclick="closeThread()">&times;</span>
@@ -753,7 +801,7 @@
                 <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/ak27bOmwaUpgUCy6lbahSvbppZA.jpg" alt="Song Weilong Portrait">
             </div>
             <div class="actor-info">
-                <h1>宋威龙</h1>
+                <h1>宋威龙 Song Weilong</h1>
                 <p style="font-size: 18px; color: #8892b0;">The Resilient Old Soul</p>
                 <div class="vibe-tags">
                     <span class="tag">#ShaolinResilience</span>
@@ -779,7 +827,7 @@
                     <div class="film-card" onclick="window.location.href='works/go_ahead.html'">
                         <div class="poster-wrapper">
                             <span class="type-badge">DRAMA</span>
-                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/75SigmLMhs3x4rA149w2hxT3iXD.jpg" alt="Go Ahead" class="poster">
+                            <img src="assets/posters/go_ahead.jpg" alt="Go Ahead" class="poster">
                         </div>
                         <div class="film-info">
                             <div class="film-title">Go Ahead</div>
